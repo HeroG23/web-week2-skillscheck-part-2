@@ -19,7 +19,8 @@ var book1 = {
 var book2 = {
   title: "Oh, the Places You'll Go!",
   author: 'Dr. Seuss',
-  available: false
+  available: false,
+  checkOut: checkOut
 };
 
 // Q1:
@@ -28,10 +29,11 @@ var book2 = {
 
 // CODE HERE
 
+var book1CheckOut = book1.checkOut()
 
 // What is the context of running book1.checkOut()?
 // var q1Context = "explicit"
-// var q1Context = 'implicit';
+var q1Context = 'implicit';
 // var q1Context = "default"
 // var q1Context = "new"
 
@@ -41,10 +43,10 @@ var book2 = {
 // variable named book2CheckOut.
 
 // CODE HERE
-
+var book2CheckOut = book2.checkOut()
 
 // What is the context of running the function checkOut on book1?
-// var q2Context = 'explicit';
+var q2Context = 'explicit';
 // var q2Context = "implicit"
 // var q2Context = "default"
 // var q2Context = "new"
@@ -55,12 +57,12 @@ var book2 = {
 // variable named globalCheckOut.
 
 // CODE HERE
-
+var globalCheckOut = checkOut()
 
 // What is the context of running checkOut()?
 // var q3Context = "explicit"
 // var q3Context = "implicit"
-// var q3Context = 'default';
+var q3Context = 'default';
 // var q3Context = "new"
 
 
@@ -69,11 +71,11 @@ var book2 = {
 // as the argument. Save the result to a variable named book2CheckOut2.
 
 // CODE HERE
-
+var book2CheckOut2 = book1.checkOut.apply(book2)
 
 // What is the context of applying the book1 method
 // checkOut to book2?
-// var q4Context = 'explicit';
+var q4Context = 'explicit';
 // var q4Context = "implicit"
 // var q4Context = "default"
 // var q4Context = "new"
@@ -99,8 +101,7 @@ function updatePerson(name, age, title) {
 // England"; save the result to a variable named queenAnne.
 
 //Code here
-
-
+var queenAnne = updatePerson.call(this.person1, "Anne", 30, "Queen of England")
 // Q2:
 // Use the method .apply to run updatePerson on person2;
 // pass in the values "Catherine of Aragon", 37, and "Former
@@ -132,7 +133,7 @@ var hampton = new Castle('Hampton Court', 'England', 'red', 'bricks', false);
 // What is the context of running
 // new Castle("Chambord", "France", "Grey", "Stone", true)?
 
-// var q1CastleContext = "explicit"
+var q1CastleContext = "explicit"
 // var q1CastleContext = "implicit"
 // var q1CastleContext = "default"
 // var q1CastleContext = 'new';
