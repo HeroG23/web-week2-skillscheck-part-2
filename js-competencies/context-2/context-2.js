@@ -101,14 +101,14 @@ function updatePerson(name, age, title) {
 // England"; save the result to a variable named queenAnne.
 
 //Code here
-var queenAnne = updatePerson.call(this.person1, "Anne", 30, "Queen of England")
+var queenAnne = updatePerson.call(person1, "Anne Boleyn", 30, "Queen of England")
 // Q2:
 // Use the method .apply to run updatePerson on person2;
 // pass in the values "Catherine of Aragon", 37, and "Former
 // Queen"; save the result to a variable named queenCatherine.
 
 //Code here
-
+var queenCatherine = updatePerson.apply(person2,["Catherine of Aragon", 37, "Former Queen"])
 
 // /////////////////Problem 3//////////////////
 // Given the constructor function below, answer
@@ -133,10 +133,10 @@ var hampton = new Castle('Hampton Court', 'England', 'red', 'bricks', false);
 // What is the context of running
 // new Castle("Chambord", "France", "Grey", "Stone", true)?
 
-var q1CastleContext = "explicit"
+// var q1CastleContext = "explicit"
 // var q1CastleContext = "implicit"
 // var q1CastleContext = "default"
-// var q1CastleContext = 'new';
+var q1CastleContext = 'new';
 
 
 // Q2:
@@ -144,11 +144,11 @@ var q1CastleContext = "explicit"
 // save the result to a variable ran chambordInfo.
 
 // CODE HERE
-
+var chambordInfo = chambord.getCastle()
 
 // What was 'this' when you ran chambord.getCastle()?
 
 // var getCastleContext = "Castle"
-// var getCastleContext = 'chambord';
+var getCastleContext = 'chambord';
 // var getCastleContext = "new"
 // var getCastleContext = "window"

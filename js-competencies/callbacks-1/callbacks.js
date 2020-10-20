@@ -4,10 +4,10 @@
 
 //Code here
 function stringItOut(array){
-  let answer
-  let answerNum = array.sort((a, b) => b-a)
-  let answerStr = array.sort()
-  return answer.toString(answerNum, answerStr)
+  let answer = array;
+  let answerStr = answer.sort()
+  let answerNum = answer.sort((a, b) => b-a)
+  return answer.toString((answerNum, answerStr))
 }
 
 //////////////////PROBLEM 2////////////////////

@@ -102,14 +102,14 @@ var descent = {
 };
 
 // CODE HERE
-var almostThere = descent.remainingElevation
+var almostThere = descent.remainingElevation.bind(this.descent)
 
 // Now, invoke almostThere and save the result to
 // a variable named finalDescent.
 
 // CODE HERE
+var finalDescent = almostThere()
 
-let finalDescent = almostThere
 
 // Now, uncomment the best answers:
 
