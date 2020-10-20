@@ -12,7 +12,7 @@ var sunsetColors = ["brown", "purple", "pink", "red", "orange", "yellow"]
 
 //Code here
 var sunset = function (array) {
-    let sunsetCopy = [...array];
+    let sunsetCopy = [0,...array];
     sunsetCopy[0] = 'blue'
     return sunsetCopy;
 }
