@@ -83,8 +83,7 @@ var answers = ["Example B", "Example C", "Example D"]
 //string without spaces.
 
 //Code here
-let cleanUp = (string) => string.trim()
-
+cleanUp = string =>string.split(" ").join("")
 //////////////////PROBLEM 7////////////////////
 //Finish the function below. Assume that the
 //parameter obj has a property called "ocean".
