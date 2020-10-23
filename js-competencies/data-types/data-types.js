@@ -97,14 +97,11 @@ function undefiner(array){
 //the parameter divided by 2.
 
 //Code here
-function nananan(parameter){
-    if(parameter/2 === NaN){
-        return "FLYING NOCTURNAL MAMMAL MAN!"
-    }else{
-        parameter /= 2
-        return parameter
-    }
+nananan = (num) => {
+    if (isNaN(num/2)) return "FLYING NOCTURNAL MAMMAL MAN!"
+    else return num/2
 }
+
 
 //Now, call nananan with the value NaN, and store the 
 //result of the function call in a variable called "na".
@@ -119,7 +116,7 @@ let na = nananan(NaN)
 
 //Code here
 function arrayChecker(arr){
-    if(typeof(arr) === ["array"]){
+    if(Array.isArray(arr)){
         return true
     }else{
         return false
