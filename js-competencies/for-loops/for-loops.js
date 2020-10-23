@@ -42,7 +42,7 @@
 
   function leapFrog(arr) {
     //Code here
-    for(let i = 0; i < arr.length; i += 2){
-        arr.push(arr[i] + " frog")
+    for(let i = 0; i < arr.length - 1; i += 2){
+        arr[i] += " frog"
     } return arr
   }
