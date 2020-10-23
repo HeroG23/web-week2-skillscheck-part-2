@@ -107,7 +107,4 @@ var doors = {
 }
 
 //Code here
-var doorKeys = [];
-for(let key in doors){
-  doorKeys.push(doors[key])
-}
+var doorKeys = Object.keys(doors);
